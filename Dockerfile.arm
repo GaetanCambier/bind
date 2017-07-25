@@ -2,7 +2,7 @@ FROM	arm32v6/alpine:latest
 
 RUN [ "cross-build-start" ]
 
-ENV	IMAGE	arm32v6/alpine:latest
+ENV	IMAGE	alpine:latest
 
 MAINTAINER	Gaetan Cambier "Gaetan@Cambier.org"
 
