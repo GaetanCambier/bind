@@ -1,3 +1,5 @@
+dist: trusty
+
 sudo: required
 
 services:
@@ -8,7 +10,7 @@ env:
     - IMAGE="gaetancambier/bind"
     - DOCKERNAME="bind"
   matrix:
-    - ARCH=arm32v6
+    - ARCH=arm
     - ARCH=amd64
 
 script:
