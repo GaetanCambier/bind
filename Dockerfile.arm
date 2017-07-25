@@ -7,13 +7,14 @@ EXPOSE	53/tcp 53/udp
 ENV	BIND_USER=named \
 	DATA_DIR=/data
 
-RUN	apk add --update --no-cache bind && \
-	mkdir -m 0755 -p /var/run/named && \ 
-	chown -R root:named /var/run/named
+RUN	apk add --update --no-cache bind 
+RUN	mkdir -m 0755 -p /var/run/named  
+RUN	chown -R root:named /var/run/named
 
 VOLUME ["/data"]
 
-COPY entrypoint.sh /
+COPY entrypoint.sh /sbin/entrypoint.sh
+RUN chmod 755 /sbin/entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
-
+CMD ["/usr/sbin/named"]
