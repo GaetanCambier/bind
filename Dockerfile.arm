@@ -1,4 +1,4 @@
-FROM	arm32v6/alpine:latest
+FROM	jsurf/rpi-raspbian
 
 RUN [ "cross-build-start" ]
 
