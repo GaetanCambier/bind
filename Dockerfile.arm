@@ -1,4 +1,4 @@
-FROM	resin/rpi-raspbian
+FROM	arm32v6/alpine:latest
 
 RUN [ "cross-build-start" ]
 
