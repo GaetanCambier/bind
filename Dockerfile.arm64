@@ -13,8 +13,7 @@ RUN	chown -R root:named /var/run/named
 
 VOLUME ["/data"]
 
-COPY entrypoint.sh /sbin/entrypoint.sh
-RUN chmod 755 /sbin/entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod 755 /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["/usr/sbin/named"]
