@@ -1,4 +1,4 @@
-FROM	crossarch/alpine
+FROM	crossarch/alpine:armhf-latest
 
 RUN [ "cross-build-start" ]
 
