@@ -9,7 +9,7 @@ ENV	BIND_USER=bind \
 
 RUN	apk add --update --no-cache bind && \
 	mkdir -m 0755 -p /var/run/named && \ 
-	chown -R root:named /var/run/named
+	chown -R root:${BIND_USER} /var/run/named
 
 VOLUME ["/data"]
 
