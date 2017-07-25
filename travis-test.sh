@@ -3,7 +3,7 @@ set -e
 
 if [ "$ARCH" == "amd64" ]; then
   # test image
-  docker run -name ${DOCKERNAME}test $DOCKERNAME
+  docker run --name ${DOCKERNAME}test $DOCKERNAME
 
   sleep 5
 
