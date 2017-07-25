@@ -7,7 +7,7 @@ EXPOSE	53/tcp 53/udp
 ENV	BIND_USER=bind \
 	DATA_DIR=/data
 
-RUN	apk add --update --no-cache bind \
+RUN	apk add --update --no-cache bind && \
 	mkdir -m 0755 -p /var/run/named && \ 
 	chown -R root:named /var/run/named
 
