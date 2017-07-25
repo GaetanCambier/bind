@@ -10,7 +10,7 @@ env:
     - IMAGE="gaetancambier/bind"
     - DOCKERNAME="bind"
   matrix:
-    - ARCH=arm64
+    - ARCH=arm
     - ARCH=amd64
 
 script:
