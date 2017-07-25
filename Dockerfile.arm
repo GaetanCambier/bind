@@ -2,7 +2,7 @@ FROM	resin/rpi-raspbian
 
 RUN [ "cross-build-start" ]
 
-ENV	arm32v6/alpine:latest
+ENV	IMAGE	arm32v6/alpine:latest
 
 MAINTAINER	Gaetan Cambier "Gaetan@Cambier.org"
 
