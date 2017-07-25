@@ -4,8 +4,8 @@ services:
  - docker
 
 env:
-  image=gaetancambier/bind
-  DOCKERNAME=bind
+  - IMAGE="gaetancambier/bind"
+  - DOCKERNAME="bind"
   matrix:
     - ARCH=arm32v6
     - ARCH=amd64
