@@ -1,8 +1,4 @@
-FROM	resin/rpi-raspbian
-
-RUN [ "cross-build-start" ]
-
-ENV	arm32v6/alpine:latest
+FROM	arm32v6/alpine:latest
 
 MAINTAINER	Gaetan Cambier "Gaetan@Cambier.org"
 
@@ -21,5 +17,3 @@ COPY entrypoint.sh /entrypoint.sh
 RUN chmod 755 /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
-
-RUN [ "cross-build-end" ]
